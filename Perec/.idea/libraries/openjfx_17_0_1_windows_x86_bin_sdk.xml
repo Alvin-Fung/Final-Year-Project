@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="openjfx-17.0.1_windows-x86_bin-sdk">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/openjfx-17.0.1_windows-x86_bin-sdk.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

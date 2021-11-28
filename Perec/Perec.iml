@@ -1,28 +1,20 @@
-import static java.lang.Integer.valueOf;
-
-public class TestNode {
-
-    public static void main(String[] args) {
-
-        // String line0 = "0,1,21,Go to see Mr X,Is Mr X in his office?";
-        // String line1 = "1,2,31,Knock on the door,Does he look up?";
-        // String line21 = "21,22,44,Hang around,Is Miss Y in her office?";
-
-        Node n0 = new Node();
-        mapNode(n0, line0);
-        Node n1 = new Node();
-        mapNode(n1, line1);
-        Node n21 = new Node();
-        mapNode(n21, line21);
-
-        n0.setYesNode(n1);
-        n0.setNoNode(n21);
-
-        System.out.println(n0.toString());
-        System.out.println(n0.getYesNode().toString());
-        System.out.println(n0.getNoNode().toString());
-
-    }
-
-    public static void mapNode(Node n, String line) {
-      
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Perec/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../openjfx-17.0.1_windows-x64_bin-sdk.zip!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

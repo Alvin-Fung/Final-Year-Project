@@ -27,7 +27,7 @@ public class Node {
     public void setNoID(int noID) {this.noID = noID;}
     public String getDescription() {return description;}
     public void setDescription(String description) {this.description = description; }
-    public String getMusicFile() {return musicFileName;}
+    public String getMusicFilePath() {return musicFileName;}
     public void setMusicFileName(String musicFileName) {this.musicFileName = musicFileName;}
     public Node getYesNode() {return yesNode;}
     public void setYesNode(Node yes) {this.yesNode = yes;}

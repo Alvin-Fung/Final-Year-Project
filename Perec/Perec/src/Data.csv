@@ -1,4 +1,7 @@
-1,2,3, -,1.mp3
-2,3,4, -,3.mp3
-3,4,1, -,5.mp3
-4,1,1, -,7.mp3
+1,2,2,-,audioFiles/CMajor/1.mp3
+2,3,3,-,audioFiles/CMajor/2.mp3
+3,4,4,-,audioFiles/CMajor/3.mp3
+4,5,5,-,audioFiles/CMajor/4.mp3
+5,6,6,-,audioFiles/CMajor/5.mp3
+6,7,7,-,audioFiles/CMajor/6.mp3
+7,1,1,-,audioFiles/CMajor/7.mp3

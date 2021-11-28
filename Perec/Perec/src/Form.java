@@ -80,7 +80,7 @@ public class Form {
 /****************************************************/
 /****************************************************/
     private static void move(NodeMap map, int direction){
-        if (map.currentNode().getMusicFile().equals("-"))
+        if (map.currentNode().getMusicFilePath().equals("-"))
         {
             map.noDecision(); }
         else {
@@ -89,9 +89,9 @@ public class Form {
 
     private static void nodeDisplay(NodeMap map){
         ta.setText( map.currentNode().getDescription() + "\n");
-        ta.append(map.currentNode().getMusicFile() + "\n");
+        ta.append(map.currentNode().getMusicFilePath() + "\n");
         ta.setLineWrap(true);
-        if (map.currentNode().getMusicFile().equals("-")){
+        if (map.currentNode().getMusicFilePath().equals("-")){
             yes.setFont(createFont(40));
             yes.setText("pressEnterToContinue");
             no.setVisible(false);

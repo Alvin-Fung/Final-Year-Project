@@ -1,5 +1,7 @@
 //import org.jetbrains.annotations.NotNull;
 
+import com.sun.istack.internal.NotNull;
+
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -42,7 +44,7 @@ public class NodeCollection {
         fileRef.close();
     }
 
-    //private @NotNull
+    private @NotNull
     Node mapFields(String line) {
         String[] stringArray = line.split(",");
         Node n = new Node();

@@ -19,10 +19,10 @@ public class NodeMap {
 
     public void decision(int decision) {
         switch (decision) {
-            case 1:
+            case 0:
                 currentNode = currentNode.getYesNode();
                 break;
-            case 2:
+            case 1:
                 currentNode = currentNode.getNoNode();
                 break;
         }
@@ -39,6 +39,7 @@ public class NodeMap {
             head = nodeCollection.get(0);
         } catch (FileNotFoundException e) {
             //message
+            System.out.println("Failed to load...");
             return;
         }
         buildMap(nodeCollection);
