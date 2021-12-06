@@ -17,8 +17,6 @@ public class Console {
 
             print(map.currentNode().getDescription());
             print(map.currentNode().getMusicFilePath());
-            //call music player
-
 
             if (map.currentNode().getMusicFilePath().equals("-")) {
                 pressEnterToContinue();
@@ -80,4 +78,14 @@ public class Console {
         mediaPlayer.play();
 
     }
+
+//    public Media loadJazzChords(String jazzChords ) {
+//        String dm7 = "Perec\\audioFiles\\JazzChords\\Dm7.mp3";
+//
+//        Media dm7 = new Media(new File(jazzChords).toURI().toString());
+//        MediaPlayer jazzPlayer = new MediaPlayer(dm7);
+//
+//        return dm7;
+//
+//    }
 }
