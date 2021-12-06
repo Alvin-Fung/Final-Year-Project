@@ -79,13 +79,13 @@ public class Console {
 
     }
 
-//    public Media loadJazzChords(String jazzChords ) {
-//        String dm7 = "Perec\\audioFiles\\JazzChords\\Dm7.mp3";
-//
-//        Media dm7 = new Media(new File(jazzChords).toURI().toString());
-//        MediaPlayer jazzPlayer = new MediaPlayer(dm7);
-//
-//        return dm7;
-//
-//    }
+    public Media loadJazzChords(String jazzChords ) {
+        String dm7 = "Perec\\audioFiles\\JazzChords\\Dm7.mp3";
+
+        Media dm7 = new Media(new File(jazzChords).toURI().toString());
+        MediaPlayer jazzPlayer = new MediaPlayer(dm7);
+
+        return dm7;
+
+    }
 }
