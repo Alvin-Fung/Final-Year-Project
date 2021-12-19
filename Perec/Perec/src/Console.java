@@ -1,7 +1,11 @@
 import java.io.File;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
+import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -25,7 +29,7 @@ public class Console {
                 Media playMedia = loadMusicFile(map.currentNode().getMusicFilePath()); //This gets the file from the node
                 play(playMedia);
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(4000);
                 }
                 catch(Exception e){
 
@@ -50,11 +54,7 @@ public class Console {
             print("Please use the Enter key to continue...");
         }
     }
-//  public int fromConsoleGetInt(String prompt) {
-//      print(prompt);
-//      int retVal = io.nextInt();
-//      return retVal;
-//  }
+
     public int randomDecision(){
 
         Random randomTwoVal = new Random(); //Initialise random object
@@ -79,13 +79,24 @@ public class Console {
 
     }
 
-    public Media loadJazzChords(String jazzChords ) {
-        String dm7 = "Perec\\audioFiles\\JazzChords\\Dm7.mp3";
+    // Foundation Jazz chord utilising a class method:
+    public ObservableList<Media> chordPlayer() {
+        //Jazz chord variables
+        Media dChord = new Media(Objects.requireNonNull(this.getClass().getResource("Dm7.mp3")).toExternalForm());
+        Media gChord = new Media(Objects.requireNonNull(this.getClass().getResource("G7.mp3")).toExternalForm());
+        Media cChord = new Media(Objects.requireNonNull(this.getClass().getResource("Cm7.mp3")).toExternalForm());
 
-        Media dm7 = new Media(new File(jazzChords).toURI().toString());
-        MediaPlayer jazzPlayer = new MediaPlayer(dm7);
+        //Assign these variables into an array:
+        ObservableList<Media> chordList = FXCollections.observableArrayList();
+        chordList.addAll(dChord, gChord, cChord);
 
-        return dm7;
-
+        return chordList;
     }
-}
+
+    public void playJazzChords ( Media chordList){
+
+        MediaPlayer jazzChordPlayer = new MediaPlayer(chordList);
+        jazzChordPlayer.play();
+    }
+    }
+
