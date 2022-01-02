@@ -1,19 +1,17 @@
 import java.io.File;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
-import java.util.Objects;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Console {
 
-     Scanner io;
+    Scanner io;
 
-    public Console(NodeMap map){
+    public Console(NodeMap map) {
 
         io = new Scanner(System.in);
 
@@ -26,36 +24,42 @@ public class Console {
                 pressEnterToContinue();
                 map.noDecision();
             } else {
-                Media playMedia = loadMusicFile(map.currentNode().getMusicFilePath()); //This gets the file from the node
+
+                Media playMedia = loadMusicFile(map.currentNode().getMusicFilePath()); //This gets the main file from the node
                 play(playMedia);
                 try {
                     Thread.sleep(4000);
-                }
-                catch(Exception e){
+                } catch (Exception e) {
 
                 }
                 map.decision(
                         //fromConsoleGetInt("Yes or No? (press 1 for Yes or 2 No)")
                         randomDecision()
-                ) ;
+                );
             }
         }
 
     }
 
-    public  void print(String  info){System.out.println(info);}
-    public  void lineBreak(){
+
+    public void print(String info) {
+        System.out.println(info);
+    }
+
+    public void lineBreak() {
         System.out.println("\n---------------");
     }
-    public  void pressEnterToContinue(){
+
+    public void pressEnterToContinue() {
         print("Press Enter key to continue...");
-        try { System.in.read();}
-        catch(Exception e) {
+        try {
+            System.in.read();
+        } catch (Exception e) {
             print("Please use the Enter key to continue...");
         }
     }
 
-    public int randomDecision(){
+    public int randomDecision() {
 
         Random randomTwoVal = new Random(); //Initialise random object
 
@@ -64,7 +68,7 @@ public class Console {
     }
 
 
-    public Media loadMusicFile(String filePath){
+    public Media loadMusicFile(String filePath) {
 
         Media hit = new Media(new File(filePath).toURI().toString());
         //This is a media resource, "hit" is made from the Media class.
@@ -72,31 +76,43 @@ public class Console {
         return hit;
     }
 
-    public void play (Media hit){
+    public void play(Media hit) {
         MediaPlayer mediaPlayer = new MediaPlayer(hit); //Afterwards, this passes object "hit" into a new media player, and then it plays.
         // Note:- According to how this works: Everytime a node is accessed, a new media player is created.
         mediaPlayer.play();
 
     }
 
-    // Foundation Jazz chord utilising a class method:
-    public ObservableList<Media> chordPlayer() {
+    public ArrayList<MediaPlayer> loadChords() { //no need to pass parameters as it makes its own chord list
         //Jazz chord variables
-        Media dChord = new Media(Objects.requireNonNull(this.getClass().getResource("Dm7.mp3")).toExternalForm());
-        Media gChord = new Media(Objects.requireNonNull(this.getClass().getResource("G7.mp3")).toExternalForm());
-        Media cChord = new Media(Objects.requireNonNull(this.getClass().getResource("Cm7.mp3")).toExternalForm());
+        Media dChord = loadMusicFile("audioFiles\\JazzChords\\Dm7.mp3");
+        Media gChord = loadMusicFile("audioFiles\\JazzChords\\G7.mp3");
+        Media cChord = loadMusicFile("audioFiles\\JazzChords\\Cm7.mp3");
 
         //Assign these variables into an array:
-        ObservableList<Media> chordList = FXCollections.observableArrayList();
-        chordList.addAll(dChord, gChord, cChord);
+        ArrayList<Media> chordList = new ArrayList<>();
+        chordList.add(dChord);
+        chordList.add(gChord);
+        chordList.add(cChord);
 
-        return chordList;
+        ArrayList<MediaPlayer> mediaPlayers = new ArrayList<>(); //Array list of Media Players
+
+        for (Media chord : chordList) { //For every chord within the chordList, a newly added chord is added to the list of Media Players.
+            mediaPlayers.add(new MediaPlayer(chord));
+        }
+        return mediaPlayers;
+        }
+
+        int curChord = 0;
+    public MediaPlayer nextChord(ArrayList<MediaPlayer> chords){ //This will allow moving from one chord to the next within the chord list
+        curChord += 1;
+        return chords.get(curChord);
     }
 
-    public void playJazzChords ( Media chordList){
+    public MediaPlayer nextNote (String filePath){
+        Media hit = new Media(new File(filePath).toURI().toString());
+        MediaPlayer notePlayer = new MediaPlayer(hit);
 
-        MediaPlayer jazzChordPlayer = new MediaPlayer(chordList);
-        jazzChordPlayer.play();
+        return notePlayer;
     }
-    }
-
+}
