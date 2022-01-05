@@ -119,7 +119,6 @@ public class Console {
         if(curChord == 2){
             curChord = 0;
         }try{
-
         }catch(Exception e){
             print("Chord progression failed!");
         }
