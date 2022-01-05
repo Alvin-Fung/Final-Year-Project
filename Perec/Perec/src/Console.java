@@ -15,6 +15,9 @@ public class Console {
 
         io = new Scanner(System.in);
 
+        //Load chords before the loop so it is ready
+        ArrayList<MediaPlayer> chords = loadChords();
+
         while (map.currentNode() != null) {
 
             print(map.currentNode().getDescription());
@@ -24,9 +27,14 @@ public class Console {
                 pressEnterToContinue();
                 map.noDecision();
             } else {
+//                Media playMedia = loadMusicFile(map.currentNode().getMusicFilePath()); //This gets the main file from the node.
+//                play(playMedia);
+                MediaPlayer chord = nextChord(chords); //getting the next chord to play.
+                MediaPlayer note = nextNote(map.currentNode().getMusicFilePath()); //gets the note from the decision tree.
 
-                Media playMedia = loadMusicFile(map.currentNode().getMusicFilePath()); //This gets the main file from the node
-                play(playMedia);
+                chord.play();
+                note.play();
+
                 try {
                     Thread.sleep(4000);
                 } catch (Exception e) {
@@ -76,12 +84,12 @@ public class Console {
         return hit;
     }
 
-    public void play(Media hit) {
-        MediaPlayer mediaPlayer = new MediaPlayer(hit); //Afterwards, this passes object "hit" into a new media player, and then it plays.
-        // Note:- According to how this works: Everytime a node is accessed, a new media player is created.
-        mediaPlayer.play();
-
-    }
+//    public void play(Media hit) {
+//        MediaPlayer mediaPlayer = new MediaPlayer(hit); //Afterwards, this passes object "hit" into a new media player, and then it plays.
+//        // Note:- According to how this works: Everytime a node is accessed, a new media player is created.
+//        mediaPlayer.play();
+//
+//    }
 
     public ArrayList<MediaPlayer> loadChords() { //no need to pass parameters as it makes its own chord list
         //Jazz chord variables
@@ -97,7 +105,7 @@ public class Console {
 
         ArrayList<MediaPlayer> mediaPlayers = new ArrayList<>(); //Array list of Media Players
 
-        for (Media chord : chordList) { //For every chord within the chordList, a newly added chord is added to the list of Media Players.
+        for (Media chord : chordList) { //For every chord within the chordList, a new chord will be added to the list of Media Players.
             mediaPlayers.add(new MediaPlayer(chord));
         }
         return mediaPlayers;
@@ -105,12 +113,24 @@ public class Console {
 
         int curChord = 0;
     public MediaPlayer nextChord(ArrayList<MediaPlayer> chords){ //This will allow moving from one chord to the next within the chord list
+
         curChord += 1;
+
+        if(curChord == 2){
+            curChord = 0;
+        }try{
+
+        }catch(Exception e){
+            print("Chord progression failed!");
+        }
+
+
         return chords.get(curChord);
     }
 
     public MediaPlayer nextNote (String filePath){
-        Media hit = new Media(new File(filePath).toURI().toString());
+        Media hit = new Media(new File(filePath).toURI().toString());//Afterwards, this passes object "hit" into a new media player, and then it plays.
+        // Note:- According to how this works: Everytime a node is accessed, a new media player is created.
         MediaPlayer notePlayer = new MediaPlayer(hit);
 
         return notePlayer;
