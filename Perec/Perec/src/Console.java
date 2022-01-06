@@ -122,8 +122,6 @@ public class Console {
         }catch(Exception e){
             print("Chord progression failed!");
         }
-
-
         return chords.get(curChord);
     }
 
