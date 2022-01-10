@@ -16,7 +16,13 @@ public class Console {
         io = new Scanner(System.in);
 
         //Load chords before the loop so it is ready
-        ArrayList<MediaPlayer> chords = loadChords();
+        ArrayList<Media> chords = loadChords();
+
+        for(int i = 1; i <= 5; i++ ){
+            // This randomly chooses a node to start off - the initialisation part of the for loop is arbitrary,
+            // however we may want to increment the value when we have more notes in order to increase further value of randomness
+                randomDecision();
+        }
 
         while (map.currentNode() != null) {
 
@@ -36,7 +42,7 @@ public class Console {
                 note.play();
 
                 try {
-                    Thread.sleep(4000);
+                    Thread.sleep(2000);
                 } catch (Exception e) {
 
                 }
@@ -91,7 +97,7 @@ public class Console {
 //
 //    }
 
-    public ArrayList<MediaPlayer> loadChords() { //no need to pass parameters as it makes its own chord list
+    public ArrayList<Media> loadChords() { //no need to pass parameters as it makes its own chord list
         //Jazz chord variables
         Media dChord = loadMusicFile("audioFiles\\JazzChords\\Dm7.mp3");
         Media gChord = loadMusicFile("audioFiles\\JazzChords\\G7.mp3");
@@ -102,27 +108,27 @@ public class Console {
         chordList.add(dChord);
         chordList.add(gChord);
         chordList.add(cChord);
-
         ArrayList<MediaPlayer> mediaPlayers = new ArrayList<>(); //Array list of Media Players
 
-        for (Media chord : chordList) { //For every chord within the chordList, a new chord will be added to the list of Media Players.
-            mediaPlayers.add(new MediaPlayer(chord));
-        }
-        return mediaPlayers;
+        ArrayList<Media> mediaList = new ArrayList<>(); //Array list of Medias
+        mediaList.add(dChord);
+        mediaList.add(gChord);
+        mediaList.add(cChord);
+
+
+        return mediaList;
         }
 
         int curChord = 0;
-    public MediaPlayer nextChord(ArrayList<MediaPlayer> chords){ //This will allow moving from one chord to the next within the chord list
+    public MediaPlayer nextChord(ArrayList<Media> chords){ //This will allow moving from one chord to the next within the chord list
 
         curChord += 1;
+        MediaPlayer nextMediaPlayer = new MediaPlayer(chords.get(curChord));
 
         if(curChord == 2){
             curChord = 0;
-        }try{
-        }catch(Exception e){
-            print("Chord progression failed!");
         }
-        return chords.get(curChord);
+        return nextMediaPlayer;
     }
 
     public MediaPlayer nextNote (String filePath){

@@ -32,7 +32,7 @@ public class NodeCollection {
 /****************************************************/
 /****************************************************/
     public NodeCollection()  throws FileNotFoundException {
-        java.io.File prc = new java.io.File("src/Data.csv");
+        java.io.File prc = new java.io.File("src/decisionMap4.csv");
         Scanner fileRef = new Scanner(prc);
         nodes = new ArrayList<Node>();
         Node node;
