@@ -38,11 +38,23 @@ public class Console {
                 MediaPlayer chord = nextChord(chords); //getting the next chord to play.
                 MediaPlayer note = nextNote(map.currentNode().getMusicFilePath()); //gets the note from the decision tree.
 
-                note.play();
-//              chord.play();
+                chord.play();
                 try {
                     Thread.sleep(2000);
                 } catch (Exception e) {
+
+                }
+                note.play();
+                try{
+                    Thread.sleep(2000);
+                }catch(Exception e){
+
+                }
+
+                note.play();
+                try{
+                    Thread.sleep(2000);
+                }catch(Exception e){
 
                 }
 
