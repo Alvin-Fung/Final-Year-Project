@@ -39,7 +39,7 @@ public class Console {
                 MediaPlayer note = nextNote(map.currentNode().getMusicFilePath()); //gets the note from the decision tree.
 
                 chord.play();
-                note.play();
+//                note.play();
                 try {
                     Thread.sleep(2000);
                 } catch (Exception e) {
@@ -128,12 +128,16 @@ public class Console {
         int curChord = 0;
     public MediaPlayer nextChord(ArrayList<Media> chords){ //This will allow moving from one chord to the next within the chord list.
 
-        curChord += 1;
         MediaPlayer nextMediaPlayer = new MediaPlayer(chords.get(curChord)); //This creates a new media player everytime for every media, based upon the current chord.
 
+        print(chords.get(curChord).getSource());
         if(curChord == 2){
-            curChord = 0;
+            curChord = 0; //goes back to the start of list of chords
         }
+        else{
+            curChord += 1; //Increments by 1 from the start
+        }
+
         return nextMediaPlayer;
     }
 
