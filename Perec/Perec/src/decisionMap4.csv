@@ -1,6 +1,6 @@
 0,2,1,-,audioFiles/AmPentatonic/A.mp3
-2,3,4,-,audioFiles/AmPentatonic/C.mp3
-3,4,5,-,audioFiles/AmPentatonic/C#.mp3
-4,5,6,-,audioFiles/AmPentatonic/D.mp3
-5,6,7,-,audioFiles/AmPentatonic/E.mp3
-7,0,0,-,audioFiles/AmPentatonic/G.mp3
+1,4,5,-,audioFiles/AmPentatonic/C.mp3
+2,0,5,-,audioFiles/AmPentatonic/C#.mp3
+3,4,5,-,audioFiles/AmPentatonic/D.mp3
+4,5,0,-,audioFiles/AmPentatonic/E.mp3
+5,4,0,-,audioFiles/AmPentatonic/G.mp3
