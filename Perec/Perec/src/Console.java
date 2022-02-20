@@ -39,16 +39,16 @@ public class Console {
                 MediaPlayer note = nextNote(map.currentNode().getMusicFilePath()); //gets the note from the decision tree.
 
                 chord.play();
-//                note.play();
+                note.play();
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(1500);
                 } catch (Exception e) {
 
                 }
 
                 chord.play();
                 try{
-                    Thread.sleep(2000);
+                    Thread.sleep(1500);
                 }catch(Exception e){
 
                 }
@@ -114,12 +114,14 @@ public class Console {
         chordList.add(dChord);
         chordList.add(gChord);
         chordList.add(cChord);
+        chordList.add(cChord);
         ArrayList<MediaPlayer> mediaPlayers = new ArrayList<>(); //Array list of Media Players
 
         //Array list of Medias
         ArrayList<Media> mediaList = new ArrayList<>();
         mediaList.add(dChord);
         mediaList.add(gChord);
+        mediaList.add(cChord);
         mediaList.add(cChord);
 
         return mediaList;
@@ -131,7 +133,7 @@ public class Console {
         MediaPlayer nextMediaPlayer = new MediaPlayer(chords.get(curChord)); //This creates a new media player everytime for every media, based upon the current chord.
 
         print(chords.get(curChord).getSource());
-        if(curChord == 2){
+        if(curChord == 3){
             curChord = 0; //goes back to the start of list of chords
         }
         else{
