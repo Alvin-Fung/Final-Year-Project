@@ -48,7 +48,7 @@ public class Console {
 
                 chord.play();
                 try{
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                 }catch(Exception e){
 
                 }
