@@ -18,7 +18,7 @@ public class Console {
         //Load chords before the loop so it is ready
         ArrayList<Media> chords = loadChords();
 
-        for(int i = 1; i <= 10; i++ ){
+        for(int i = 1; i <= 12; i++ ){
             // This randomly chooses a node to start off - the initialisation part of the for loop is arbitrary,
             // however we may want to increment the value when we have more notes in order to increase further value of randomness
                 randomDecision();
@@ -96,13 +96,6 @@ public class Console {
         return hit;
     }
 
-//    public void play(Media hit) {
-//        MediaPlayer mediaPlayer = new MediaPlayer(hit); //Afterwards, this passes object "hit" into a new media player, and then it plays.
-//        // Note:- According to how this works: Everytime a node is accessed, a new media player is created.
-//        mediaPlayer.play();
-//
-//    }
-
     public ArrayList<Media> loadChords() { //no need to pass parameters as it makes its own chord list
         //Jazz chord variables
         Media dChord = loadMusicFile("audioFiles\\JazzChords\\Dm7.mp3");
@@ -114,15 +107,22 @@ public class Console {
         chordList.add(dChord);
         chordList.add(gChord);
         chordList.add(cChord);
-//        chordList.add(cChord);
         ArrayList<MediaPlayer> mediaPlayers = new ArrayList<>(); //Array list of Media Players
 
         //Array list of Medias
         ArrayList<Media> mediaList = new ArrayList<>();
         mediaList.add(dChord);
+        mediaList.add(dChord);
+        mediaList.add(dChord);
+        mediaList.add(dChord);
+        mediaList.add(gChord);
+        mediaList.add(gChord);
+        mediaList.add(gChord);
         mediaList.add(gChord);
         mediaList.add(cChord);
-//        mediaList.add(cChord);
+        mediaList.add(cChord);
+        mediaList.add(cChord);
+        mediaList.add(cChord);
 
         return mediaList;
         }
@@ -133,7 +133,7 @@ public class Console {
         MediaPlayer nextMediaPlayer = new MediaPlayer(chords.get(curChord)); //This creates a new media player everytime for every media, based upon the current chord.
 
         print(chords.get(curChord).getSource());
-        if(curChord == 2){
+        if(curChord == 11){
             curChord = 0; //goes back to the start of list of chords
         }
         else{
