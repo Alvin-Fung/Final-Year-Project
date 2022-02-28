@@ -18,10 +18,10 @@ public class Console {
         //Load chords before the loop so it is ready
         ArrayList<Media> chords = loadChords();
 
-        for(int i = 1; i <= 12; i++ ){
+        for(int i = 1; i <= 5; i++ ){
             // This randomly chooses a node to start off - the initialisation part of the for loop is arbitrary,
             // however we may want to increment the value when we have more notes in order to increase further value of randomness
-                randomDecision();
+            map.decision(randomDecision());
         }
 
         while (map.currentNode() != null) {
@@ -48,7 +48,7 @@ public class Console {
 
                 chord.play();
                 try{
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                 }catch(Exception e){
 
                 }
@@ -112,17 +112,17 @@ public class Console {
         //Array list of Medias
         ArrayList<Media> mediaList = new ArrayList<>();
         mediaList.add(dChord);
-        mediaList.add(dChord);
-        mediaList.add(dChord);
-        mediaList.add(dChord);
+//        mediaList.add(dChord);
+//        mediaList.add(dChord);
+//        mediaList.add(dChord);
         mediaList.add(gChord);
-        mediaList.add(gChord);
-        mediaList.add(gChord);
-        mediaList.add(gChord);
+//        mediaList.add(gChord);
+//        mediaList.add(gChord);
+//        mediaList.add(gChord);
         mediaList.add(cChord);
-        mediaList.add(cChord);
-        mediaList.add(cChord);
-        mediaList.add(cChord);
+//        mediaList.add(cChord);
+//        mediaList.add(cChord);
+//        mediaList.add(cChord);
 
         return mediaList;
         }
@@ -133,7 +133,7 @@ public class Console {
         MediaPlayer nextMediaPlayer = new MediaPlayer(chords.get(curChord)); //This creates a new media player everytime for every media, based upon the current chord.
 
         print(chords.get(curChord).getSource());
-        if(curChord == 11){
+        if(curChord == 2){
             curChord = 0; //goes back to the start of list of chords
         }
         else{
