@@ -38,7 +38,7 @@ public class Console {
                 MediaPlayer chord = nextChord(chords); //getting the next chord to play.
                 MediaPlayer note = nextNote(map.currentNode().getMusicFilePath()); //gets the note from the decision tree.
 
-                chord.play();
+//                chord.play();
                 note.play();
                 try {
                     Thread.sleep(2000);
@@ -46,12 +46,12 @@ public class Console {
 
                 }
 
-                chord.play();
-                try{
-                    Thread.sleep(2000);
-                }catch(Exception e){
-
-                }
+//                chord.play();
+//                try{
+//                    Thread.sleep(2000);
+//                }catch(Exception e){
+//
+//                }
 
                 map.decision(
                         randomDecision()
@@ -83,7 +83,7 @@ public class Console {
 
         Random randomTwoVal = new Random(); //Initialise random object
 
-        return randomTwoVal.nextInt(2);  // Returns number from 0-1
+        return randomTwoVal.nextInt(4);  // Returns number from 0-3
 
     }
 
