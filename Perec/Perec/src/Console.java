@@ -18,7 +18,7 @@ public class Console {
         //Load chords before the loop so it is ready
         ArrayList<Media> chords = loadChords();
 
-        for(int i = 1; i <= 5; i++ ){
+        for(int i = 1; i <= 3; i++ ){
             // This randomly chooses a node to start off - the initialisation part of the for loop is arbitrary,
             // however we may want to increment the value when we have more notes in order to increase further value of randomness
             map.decision(randomDecision());
@@ -38,20 +38,20 @@ public class Console {
                 MediaPlayer chord = nextChord(chords); //getting the next chord to play.
                 MediaPlayer note = nextNote(map.currentNode().getMusicFilePath()); //gets the note from the decision tree.
 
-//                chord.play();
                 note.play();
+                chord.play();
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+
+                }
+
+                chord.play();
                 try {
                     Thread.sleep(2000);
                 } catch (Exception e) {
 
                 }
-
-//                chord.play();
-//                try{
-//                    Thread.sleep(2000);
-//                }catch(Exception e){
-//
-//                }
 
                 map.decision(
                         randomDecision()
@@ -83,7 +83,7 @@ public class Console {
 
         Random randomTwoVal = new Random(); //Initialise random object
 
-        return randomTwoVal.nextInt(4);  // Returns number from 0-3
+        return randomTwoVal.nextInt(3);  // Returns number from 0-3
 
     }
 
