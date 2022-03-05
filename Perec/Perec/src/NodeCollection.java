@@ -49,9 +49,9 @@ public class NodeCollection {
         String[] stringArray = line.split(",");
         Node n = new Node();
         n.setID(valueOf(stringArray[0]));
-        n.setYesID(valueOf(stringArray[1]));
-        n.setNoID(valueOf(stringArray[2]));
-        n.setDescription(stringArray[3]);
+        n.setFirstNoteID(valueOf(stringArray[1]));
+        n.setSecondNoteID(valueOf(stringArray[2]));
+        n.setThirdNoteID(valueOf(stringArray[3]));
         n.setMusicFileName(stringArray[4]);
         return n;
     }

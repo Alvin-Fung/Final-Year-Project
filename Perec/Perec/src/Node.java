@@ -1,46 +1,52 @@
 public class Node {
 
     private int ID;
-    private int yesID;
-    private int noID;
-    private String description;
+    private int firstNoteID;
+    private int secondNoteID;
+    private int thirdNoteID;
     private String musicFileName;
 
-    private Node yesNode;
-    private Node noNode;
+    private Node firstNoteNode;
+    private Node secondNoteNode;
+    private Node thirdNoteNode;
 
-    public Node(int ID, int yesID, int noID, String description, String musicFileName) {
+    public Node(int ID, int firstNoteID, int secondNoteID, int thirdNoteID, String musicFileName) {
         this.ID = ID;
-        this.yesID = yesID;
-        this.noID = noID;
-        this.description = description;
+        this.firstNoteID = firstNoteID;
+        this.secondNoteID = secondNoteID;
+        this.thirdNoteID = thirdNoteID;
         this.musicFileName = musicFileName;
     }
 
     public Node() {}
 
+    //ID setters and getters:
     public int getID() {return ID;}
     public void setID(int ID) {this.ID = ID;}
-    public int getYesID() {return yesID;}
-    public void setYesID(int yesID) {this.yesID = yesID; }
-    public int getNoID() {return noID;}
-    public void setNoID(int noID) {this.noID = noID;}
-    public String getDescription() {return description;}
-    public void setDescription(String description) {this.description = description; }
+    public int getFirstNoteID() {return firstNoteID;}
+    public void setFirstNoteID(int firstNoteID) {this.firstNoteID = firstNoteID;}
+    public int getSecondNoteID() {return secondNoteID;}
+    public void setSecondNoteID(int secondNoteID) {this.secondNoteID = secondNoteID;}
+    public int getThirdNoteID() {return thirdNoteID;}
+    public void setThirdNoteID(int thirdNoteID) {this.thirdNoteID = thirdNoteID;}
     public String getMusicFilePath() {return musicFileName;}
     public void setMusicFileName(String musicFileName) {this.musicFileName = musicFileName;}
-    public Node getYesNode() {return yesNode;}
-    public void setYesNode(Node yes) {this.yesNode = yes;}
-    public Node getNoNode() {return noNode;}
-    public void setNoNode(Node no) {this.noNode = no;}
+
+    //Node setters and getters:
+    public Node getFirstNoteNode() {return firstNoteNode;}
+    public void setFirstNoteNode(Node firstNote) {this.firstNoteNode = firstNote;}
+    public Node getSecondNoteNode() {return secondNoteNode;}
+    public void setSecondNoteNode(Node secondNote) {this.secondNoteNode = secondNote;}
+    public Node getThirdNoteNode() {return thirdNoteNode;}
+    public void setThirdNoteNode(Node thirdNote) {this.thirdNoteNode = thirdNote;}
 
 
     @Override
     public String toString() {
         return "nodeID:" + ID +
-                ", yesID:" + yesID +
-                ", noID:" + noID +
-                ", description:'" + description + '\'' +
+                ", firstNoteID:" + firstNoteID +
+                ", secondNoteID:" + secondNoteID +
+                ", thirdNoteID:'" + thirdNoteID + '\'' +
                 ", question:'" + musicFileName + '\'';
     }
 

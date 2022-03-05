@@ -14,16 +14,19 @@ public class NodeMap {
     public Node currentNode() { return currentNode;}
 
     public void noDecision(){
-        currentNode = currentNode.getYesNode();
+        currentNode = currentNode.getFirstNoteNode();
     }
 
     public void decision(int decision) {
         switch (decision) {
             case 0:
-                currentNode = currentNode.getYesNode();
+                currentNode = currentNode.getFirstNoteNode();
                 break;
             case 1:
-                currentNode = currentNode.getNoNode();
+                currentNode = currentNode.getSecondNoteNode();
+                break;
+            case 2:
+                currentNode = currentNode.getThirdNoteNode();
                 break;
         }
     }
@@ -50,43 +53,46 @@ public class NodeMap {
     private void buildMap(NodeCollection nodeCollection)   {
         if (nodeCollection == null) {return;}
         for(Node source : nodeCollection.arrayList()){
-            int yesID = source.getYesID();
-            int noID = source.getNoID();
-            Node yesNode = nodeCollection.locateNodeBy(yesID);
-            Node noNode = nodeCollection.locateNodeBy(noID);
-            source.setYesNode(yesNode);
-            source.setNoNode(noNode);
+            int firstNoteID = source.getFirstNoteID();
+            int secondNoteID = source.getSecondNoteID();
+            int thirdNoteID = source.getThirdNoteID();
+            Node firstNoteNode = nodeCollection.locateNodeBy(firstNoteID);
+            Node secondNoteNode = nodeCollection.locateNodeBy(secondNoteID);
+            Node thirdNoteNode =  nodeCollection.locateNodeBy(thirdNoteID);
+            source.setFirstNoteNode(firstNoteNode);
+            source.setSecondNoteNode(secondNoteNode);
+            source.setThirdNoteNode(thirdNoteNode);
         }
     }
-
-    public String toString(){
-        String string = "";
-        string += yesPath() + "\n";
-        string += noPath() + "\n";
-        return string;
-    }
-
-    public String yesPath(){
-        Node node = head;
-        String string = "YES PATH\n";
-        while(node != null) {
-            string += node.toString() + "\n";
-            node = node.getYesNode();
-            if (node.getID() == 0) { node = null;}
-        }
-        return string;
-    }
-
-    public String noPath(){
-        Node node = head;
-        String string = "NO PATH\n";
-        while(node != null) {
-            string += node.toString() + "\n";
-            node = node.getNoNode();
-            if (node.getID() == 0) { node = null;}
-        }
-        return string;
-    }
+// This section below is not in use at all with my code, so it's commented out.
+//    public String toString(){
+//        String string = "";
+//        string += firstNotePath() + "\n";
+//        string += secondNotePath() + "\n";
+//        return string;
+//    }
+//
+//    public String firstNotePath(){
+//        Node node = head;
+//        String string = "YES PATH\n";
+//        while(node != null) {
+//            string += node.toString() + "\n";
+//            node = node.getFirstNoteNode();
+//            if (node.getID() == 0) { node = null;}
+//        }
+//        return string;
+//    }
+//
+//    public String secondNotePath(){
+//        Node node = head;
+//        String string = "NO PATH\n";
+//        while(node != null) {
+//            string += node.toString() + "\n";
+//            node = node.getSecondNoteNode();
+//            if (node.getID() == 0) { node = null;}
+//        }
+//        return string;
+//    }
 
 
 }

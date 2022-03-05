@@ -26,7 +26,7 @@ public class Console {
 
         while (map.currentNode() != null) {
 
-            print(map.currentNode().getDescription());
+            print("" + map.currentNode().getID()); //Changed from getDescription as it just prints out what is in the 4th column, now being the thirdNote.
             print(map.currentNode().getMusicFilePath());
 
             if (map.currentNode().getMusicFilePath().equals("-")) {
@@ -38,17 +38,19 @@ public class Console {
                 MediaPlayer chord = nextChord(chords); //getting the next chord to play.
                 MediaPlayer note = nextNote(map.currentNode().getMusicFilePath()); //gets the note from the decision tree.
 
-                note.play();
                 chord.play();
+                note.play();
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(2000);
                 } catch (Exception e) {
 
                 }
 
+                chord = nextChord(chords);
+
                 chord.play();
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                 } catch (Exception e) {
 
                 }
@@ -112,17 +114,21 @@ public class Console {
         //Array list of Medias
         ArrayList<Media> mediaList = new ArrayList<>();
         mediaList.add(dChord);
-//        mediaList.add(dChord);
-//        mediaList.add(dChord);
-//        mediaList.add(dChord);
+        mediaList.add(dChord);
+        mediaList.add(dChord);
+        mediaList.add(dChord);
         mediaList.add(gChord);
-//        mediaList.add(gChord);
-//        mediaList.add(gChord);
-//        mediaList.add(gChord);
+        mediaList.add(gChord);
+        mediaList.add(gChord);
+        mediaList.add(gChord);
         mediaList.add(cChord);
-//        mediaList.add(cChord);
-//        mediaList.add(cChord);
-//        mediaList.add(cChord);
+        mediaList.add(cChord);
+        mediaList.add(cChord);
+        mediaList.add(cChord);
+        mediaList.add(cChord);
+        mediaList.add(cChord);
+        mediaList.add(cChord);
+        mediaList.add(cChord);
 
         return mediaList;
         }
@@ -133,7 +139,7 @@ public class Console {
         MediaPlayer nextMediaPlayer = new MediaPlayer(chords.get(curChord)); //This creates a new media player everytime for every media, based upon the current chord.
 
         print(chords.get(curChord).getSource());
-        if(curChord == 2){
+        if(curChord == 15){
             curChord = 0; //goes back to the start of list of chords
         }
         else{

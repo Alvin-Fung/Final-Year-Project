@@ -88,7 +88,8 @@ public class Form {
     }
 
     private static void nodeDisplay(NodeMap map){
-        ta.setText( map.currentNode().getDescription() + "\n");
+        //Note: Not needed as this getter has been replaced for the third note path.
+//        ta.setText( map.currentNode().getDescription() + "\n");
         ta.append(map.currentNode().getMusicFilePath() + "\n");
         ta.setLineWrap(true);
         if (map.currentNode().getMusicFilePath().equals("-")){
