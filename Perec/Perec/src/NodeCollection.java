@@ -32,7 +32,7 @@ public class NodeCollection {
 /****************************************************/
 /****************************************************/
     public NodeCollection()  throws FileNotFoundException {
-        java.io.File prc = new java.io.File("src/A Natural Minor Scale - Data map 1.csv");
+        java.io.File prc = new java.io.File("src/AMinorScale.csv");
         Scanner fileRef = new Scanner(prc);
         nodes = new ArrayList<Node>();
         Node node;
