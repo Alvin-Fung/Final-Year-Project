@@ -38,10 +38,11 @@ public class Console {
                 MediaPlayer chord = nextChord(chords); //getting the next chord to play.
                 MediaPlayer note = nextNote(map.currentNode().getMusicFilePath()); //gets the note from the decision tree.
 
+                // Structure 1:
                 chord.play();
                 note.play();
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                 } catch (Exception e) {
 
                 }
@@ -54,6 +55,10 @@ public class Console {
                 } catch (Exception e) {
 
                 }
+                // Structure 2:
+
+
+
 
                 map.decision(
                         randomDecision()
