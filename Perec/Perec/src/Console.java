@@ -55,10 +55,23 @@ public class Console {
                 } catch (Exception e) {
 
                 }
-                // Structure 2:
-
-
-
+//                // Structure 2:
+//                chord.play();
+//                note.play();
+//                try{
+//                    Thread.sleep(1000);
+//                } catch (Exception e){
+//
+//                }
+//
+//                note = nextNote(map.currentNode().getMusicFilePath());
+//
+//                note.play();
+//                try {
+//                    Thread.sleep(1000);
+//                } catch (Exception e) {
+//
+//                }
 
                 map.decision(
                         randomDecision()
@@ -107,7 +120,7 @@ public class Console {
         //Jazz chord variables
         Media dChord = loadMusicFile("audioFiles\\JazzChords\\Dm7.mp3");
         Media gChord = loadMusicFile("audioFiles\\JazzChords\\G7.mp3");
-        Media cChord = loadMusicFile("audioFiles\\JazzChords\\Cm7.mp3");
+        Media cChord = loadMusicFile("audioFiles\\JazzChords\\CMaj7.mp3");
 
         //Assign these variables into an array:
         ArrayList<Media> chordList = new ArrayList<>();
