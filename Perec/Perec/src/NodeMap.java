@@ -13,7 +13,7 @@ public class NodeMap {
 /****************************************************/
     public Node currentNode() { return currentNode;}
 
-    public void noDecision(){
+    public void firstDecision(){
         currentNode = currentNode.getFirstNoteNode();
     }
 

@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="451a13b4-58c0-442f-be46-6d65387a413f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/AMinorScale.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Perec/Perec/src/AMinorScale.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/Perec/Perec/src/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Form.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/NodeMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/Perec/Perec/src/NodeMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/TestFlatFileDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/TestForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/TestNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/Console.class" beforeDir="false" afterPath="$PROJECT_DIR$/Perec/out/production/Perec/Console.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/Form.class" beforeDir="false" afterPath="$PROJECT_DIR$/Perec/out/production/Perec/Form.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/NodeMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/Perec/out/production/Perec/NodeMap.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
