@@ -93,10 +93,15 @@ public class Console {
             map.decision(randomDecision(1,17));
         }
 
-        while (map.currentNode() != null) {
 
+        //THIS NEEDS RECONFIGURATION:
+        while (map.currentNode() != null) {
+            //Redundant but base new structure of below perhaps?
 //            print("" + map.currentNode().getID()); //Changed from getDescription as it just prints out what is in the 4th column, now being the thirdNote.
 //            print(map.currentNode().getMusicFilePath());
+
+            //Have some sort of print here to show what file it is at.
+//            print();
 
             if (map.currentNode().getMusicFilePath().equals("-")) {
 //                pressEnterToContinue();
