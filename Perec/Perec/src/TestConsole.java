@@ -11,9 +11,9 @@ public class TestConsole {
 
         com.sun.javafx.application.PlatformImpl.startup(()->{}); //To initialize the toolkit
 
-        NodeMap map = new NodeMap();
-
-        Console c = new Console(map);
+//        NodeMap map = new NodeMap();
+//
+//        Console c = new Console(map);
 
         com.sun.javafx.application.PlatformImpl.exit(); //Exit the initialization
     }
