@@ -2,6 +2,7 @@ import java.io.File;
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -19,7 +20,7 @@ public class Console {
     }
 
     //Load chords and notes outside the Console:
-    public ArrayList<Media> loadNotes(){
+    public ArrayList<Media> loadNotes() {
         // Note Media variables
         Media EA = loadMusicFile("audioFiles\\A Natural Minor Scale\\E-A.mp3");
         Media EB = loadMusicFile("audioFiles\\A Natural Minor Scale\\E-B.mp3");
@@ -77,68 +78,43 @@ public class Console {
         return chordMediaList;
     }
 
-//    public Console(NodeMap map) {
-      public Console(){
+    public Console() {
         io = new Scanner(System.in);
 
         //Load chords and notes before the loop, so it is ready beforehand.
         ArrayList<Media> chords = loadChords();
         ArrayList<Media> notes = loadNotes();
 
-        for(int i = 1; i <= 3; i++ ){
-            // This randomly chooses a note or chord to start off - the initialisation part of the for loop is arbitrary,
-            // however we may want to increment the value when we have more notes in order to increase further value of randomness
-            //map.decision(randomDecision(1,17));
-            randomDecision(1,17);
-        }
+        //Original for loop is now gone because I no longer needed a random function to traverse through the nodes, being that I had 3 at the time.
+        //Original while loop has been deconstructed - A lot of it was not needed and not useful to base off with the new structure. if and else statement is now gone.
+        int randChord = randomDecision(0, 2);
+        int randNote = randomDecision(0, 16);
 
+        //Random initial value assignment so that it can be used for nextChords() and nextNotes().
+//        curChord = randChord;
+        curNotes = randNote;
 
-        //THIS NEEDS RECONFIGURATION:
-//        while (map.currentNode() != null) {
-            while( ){
-            //Redundant but base new structure of below perhaps?
-//            print("" + map.currentNode().getID()); //Changed from getDescription as it just prints out what is in the 4th column, now being the thirdNote.
-//            print(map.currentNode().getMusicFilePath());
+        while (true) {
 
-            //Have some sort of print here to show what file it is at.
-//            print();
+            MediaPlayer chord = nextChord(chords); //getting the next chord to play.
+            MediaPlayer note = nextNote(notes); //getting the  next note to play.
 
-//            if (map.currentNode().getMusicFilePath().equals("-")) {
-            if( ){
-            } else {
-//                Media playMedia = loadMusicFile(map.currentNode().getMusicFilePath()); //This gets the main file from the node.
-//                play(playMedia);
-//                MediaPlayer note = nextNote(map.currentNode().getMusicFilePath()); //gets the note from the decision tree.
-                MediaPlayer chord = nextChord(chords); //getting the next chord to play.
-                MediaPlayer note = nextNote(notes);
+            chord.play();
+            note.play();
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+            }
 
-                // Structure 1:
-                chord.play();
-                note.play();
-                try {
+            chord = nextChord(chords);
 
-                    Thread.sleep(randomDecision(500,1000));
-                } catch (Exception e) {
-
-                }
-
-                chord = nextChord(chords);
-
-                chord.play();
-                try {
-                    Thread.sleep(randomDecision(500,1000));
-                } catch (Exception e) {
-
-                }
-
-                map.decision(
-                        randomDecision(4,7)
-                );
+            chord.play();
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
             }
         }
-
     }
-
 
     public void print(String info) {
         System.out.println(info);
@@ -152,43 +128,33 @@ public class Console {
     }
 
     // Position initial variables:
-        int curChord = 0;
-        int curNotes = 0;
+    int curChord = 0;
+    int curNotes = 0;
 
-    public MediaPlayer nextChord(ArrayList<Media> chords){ //This will allow moving from one chord to the next within the chord list.
+    public MediaPlayer nextChord(ArrayList<Media> chords) { //This will allow moving from one chord to the next within the chord list.
 
         MediaPlayer nextChordPlayer = new MediaPlayer(chords.get(curChord)); //This creates a new media player everytime for every media, based upon the current chord.
 
         print(chords.get(curChord).getSource());
-        if(curChord == 3){
-            curChord = 0; //goes back to the start of list of chords
-        }
-        else{
-            curChord += 1; //Increments by 1 from the start
+        if (curChord == 2) {
+            curChord = 0; //Goes back to the start of the chords.
+        } else {
+//            curChord = randomDecision(0,2); //Randomises which chord to pick from next.
+            curChord += 1;
         }
         return nextChordPlayer;
     }
 
-    public MediaPlayer nextNote(ArrayList<Media> notes){ //Same as the nextChord's structure.
+    public MediaPlayer nextNote(ArrayList<Media> notes) { //Same as the nextChord's structure.
 
         MediaPlayer nextNotePlayer = new MediaPlayer(notes.get(curNotes));
 
         print(notes.get(curNotes).getSource());
-        if(curNotes == 17){
+        if (curNotes == 16) {
             curNotes = 0;
-        }
-        else{
-            curNotes += 1;
+        } else {
+            curNotes = randomDecision(0,16);
         }
         return nextNotePlayer;
-
-        //    public MediaPlayer nextNote (String filePath){
-//        Media hit = new Media(new File(filePath).toURI().toString());//Afterwards, this passes object "hit" into a new media player, and then it plays.
-//        // Note:- According to how this works: Everytime a node is accessed, a new media player is created.
-//        MediaPlayer notePlayer = new MediaPlayer(hit);
-//
-//        return notePlayer;
-//    }
-
     }
 }
