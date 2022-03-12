@@ -18,7 +18,6 @@ public class Console {
         return hit;
     }
 
-
     //Load chords and notes outside the Console:
     public ArrayList<Media> loadNotes(){
         // Note Media variables
@@ -61,7 +60,6 @@ public class Console {
         noteMediaList.add(eC);
 
         return noteMediaList;
-
     }
 
     public ArrayList<Media> loadChords() { //no need to pass parameters as it makes its own chord list
@@ -79,8 +77,8 @@ public class Console {
         return chordMediaList;
     }
 
-    public Console(NodeMap map) {
-
+//    public Console(NodeMap map) {
+      public Console(){
         io = new Scanner(System.in);
 
         //Load chords and notes before the loop, so it is ready beforehand.
@@ -90,12 +88,14 @@ public class Console {
         for(int i = 1; i <= 3; i++ ){
             // This randomly chooses a note or chord to start off - the initialisation part of the for loop is arbitrary,
             // however we may want to increment the value when we have more notes in order to increase further value of randomness
-            map.decision(randomDecision(1,17));
+            //map.decision(randomDecision(1,17));
+            randomDecision(1,17);
         }
 
 
         //THIS NEEDS RECONFIGURATION:
-        while (map.currentNode() != null) {
+//        while (map.currentNode() != null) {
+            while( ){
             //Redundant but base new structure of below perhaps?
 //            print("" + map.currentNode().getID()); //Changed from getDescription as it just prints out what is in the 4th column, now being the thirdNote.
 //            print(map.currentNode().getMusicFilePath());
@@ -103,8 +103,8 @@ public class Console {
             //Have some sort of print here to show what file it is at.
 //            print();
 
-            if (map.currentNode().getMusicFilePath().equals("-")) {
-//                pressEnterToContinue();
+//            if (map.currentNode().getMusicFilePath().equals("-")) {
+            if( ){
             } else {
 //                Media playMedia = loadMusicFile(map.currentNode().getMusicFilePath()); //This gets the main file from the node.
 //                play(playMedia);
@@ -145,7 +145,6 @@ public class Console {
     }
 
     public int randomDecision(int min, int max) {
-        //figure out a range
         //specify a min and maximum value and selects between the two points
         Random randomTwoVal = new Random(); //Initialise random object
         // Figure out if they go within in the return or constructor value.
