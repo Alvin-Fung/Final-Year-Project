@@ -130,17 +130,28 @@ public class Console {
     // Position initial variables:
     int curChord = 0;
     int curNotes = 0;
+    int checkChord = 0;// This variable checks what chord is currently being played.
 
     public MediaPlayer nextChord(ArrayList<Media> chords) { //This will allow moving from one chord to the next within the chord list.
 
         MediaPlayer nextChordPlayer = new MediaPlayer(chords.get(curChord)); //This creates a new media player everytime for every media, based upon the current chord.
 
         print(chords.get(curChord).getSource());
-        if (curChord == 2) {
-            curChord = 0; //Goes back to the start of the chords.
-        } else {
-//            curChord = randomDecision(0,2); //Randomises which chord to pick from next.
+        //Testing to play 4 of the same chords after each other like in real life 2 5 1 progression:
+//        if (curChord == 2) {
+//            curChord = 0; //Goes back to the start of the chords.
+//        } else {
+////            curChord = randomDecision(0,2); //Randomises which chord to pick from next.
+//            curChord += 1;
+//        }
+        checkChord += 1;
+        if (checkChord % 4 == 0){ // For every chord check is divisible by 4 to repeat for 4 measures of each chord
             curChord += 1;
+            if(curChord == 3){ // This makes sure that it's still within the list, this will make sure to go back to the start.
+                //The reason why curChord is equal to three is due to it being within range of getting the 3 element within the list.
+                //Due to it incrementing prior in the first if statement, it will reach out of bound. Therefore, if it was equal to two, Cmaj7 won't be played.
+                curChord = 0;
+            }
         }
         return nextChordPlayer;
     }
