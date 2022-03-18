@@ -132,24 +132,26 @@ public class Console {
 
     public MediaPlayer beats (int notes, int chords){
 
+        MediaPlayer beats = new MediaPlayer();
 
+        int ticks = 0;
+
+        return beats;
     }
-
-
 
     // Position initial variables:
     int curChord = 0;
     int curNote = 0;
     int curPattern = 0;
-    ArrayList<Integer> curNotes = new ArrayList<>();
     int checkChord = 0;// This (initializer if you will) variable checks what chord is currently being played.
+    ArrayList<Integer> curNotes = new ArrayList<>();
 
     public MediaPlayer nextChord(ArrayList<Media> chords) { //This will allow moving from one chord to the next within the chord list.
 
         MediaPlayer nextChordPlayer = new MediaPlayer(chords.get(curChord)); //This creates a new media player everytime for every media, based upon the current chord.
 
         print(chords.get(curChord).getSource());
-//        //Testing to play 4 of the same chords after each other like in real life 2 5 1 progression:
+//      Testing to play 4 of the same chords after each other like in real life 2 5 1 progression:
         checkChord += 1;
 
         //Iteration 1: (This only plays every chord once, and has the randomDecision method used)
@@ -160,21 +162,11 @@ public class Console {
 //            curChord += 1;
 //        }
 
-        //Iteration 2: (This does almost what I wanted, except it doesn't increment into the third chord and gets stuck on the second)
-//        if (checkChord == 4){
-//            curChord += 1;
-//            if(curChord == 3){
-//                curChord = 0;
-//            }
-//        }
-
         //Iteration 3: (Works perfectly but took me some time to figure out the math and how it works)
         if (checkChord % 4 == 0){ // For every chord check is divisible by 4 to repeat for 4 measures of each chord
             curChord += 1;
-            if(curChord == 3){ // This makes sure that it's still within the list, this will make sure to go back to the start.
-                //The reason why curChord is equal to three is due to it being within range of getting the 3rd element within the list.
-                //Due to it incrementing prior in the first if statement, it will reach out of bound.
-                // Therefore, CMaj7 won't be played, and it won't go back to the start of the index.
+            if(curChord == 3){//Set to three so that isn't out of bounds due to earlier incrementation.
+                // Makes sure that it's still within the list and goes back to the start.
                 curChord = 0;
             }
         }
@@ -185,9 +177,7 @@ public class Console {
 
         MediaPlayer nextNotePlayer = new MediaPlayer(notes.get(curNote));
 
-        //Patterns should go here I think:
-        //Testing:
-        //Method 1 of listing the pattern:
+        //Patterns:
         ArrayList<Integer> patternOne = new ArrayList<>();
         patternOne.add(4);
         patternOne.add(6);
@@ -206,10 +196,6 @@ public class Console {
             curPattern = 0;
             System.out.println("Starting Pattern");
         }
-
-    //Hmmm... Could I have a similar approach with how I could get the curNotes to go into patternOne like with the if statement below...?
-
-//        print(notes.get(curNote).getSource());
 
         //Resets/Goes back to the start of the index of notes:
         if (curNote == 16) {
