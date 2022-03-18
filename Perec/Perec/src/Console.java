@@ -22,23 +22,23 @@ public class Console {
     //Load chords and notes outside the Console:
     public ArrayList<Media> loadNotes() {
         // Note Media variables
-        Media EA = loadMusicFile("audioFiles\\A Natural Minor Scale\\E-A.mp3");
-        Media EB = loadMusicFile("audioFiles\\A Natural Minor Scale\\E-B.mp3");
-        Media EC = loadMusicFile("audioFiles\\A Natural Minor Scale\\E-C.mp3");
-        Media AD = loadMusicFile("audioFiles\\A Natural Minor Scale\\A-D.mp3");
-        Media AE = loadMusicFile("audioFiles\\A Natural Minor Scale\\A-E.mp3");
-        Media AF = loadMusicFile("audioFiles\\A Natural Minor Scale\\A-F.mp3");
-        Media DG = loadMusicFile("audioFiles\\A Natural Minor Scale\\D-G.mp3");
-        Media DA = loadMusicFile("audioFiles\\A Natural Minor Scale\\D-A.mp3");
-        Media GB = loadMusicFile("audioFiles\\A Natural Minor Scale\\G-B.mp3");
-        Media GC = loadMusicFile("audioFiles\\A Natural Minor Scale\\G-C.mp3");
-        Media GD = loadMusicFile("audioFiles\\A Natural Minor Scale\\G-D.mp3");
-        Media BE = loadMusicFile("audioFiles\\A Natural Minor Scale\\B-E.mp3");
-        Media BF = loadMusicFile("audioFiles\\A Natural Minor Scale\\B-F.mp3");
-        Media BG = loadMusicFile("audioFiles\\A Natural Minor Scale\\B-G.mp3");
-        Media eA = loadMusicFile("audioFiles\\A Natural Minor Scale\\highE-A.mp3");
-        Media eB = loadMusicFile("audioFiles\\A Natural Minor Scale\\highE-B.mp3");
-        Media eC = loadMusicFile("audioFiles\\A Natural Minor Scale\\highE-C.mp3");
+        Media EA = loadMusicFile("audioFiles\\A Natural Minor Scale\\E-A.mp3"); //0
+        Media EB = loadMusicFile("audioFiles\\A Natural Minor Scale\\E-B.mp3"); //1
+        Media EC = loadMusicFile("audioFiles\\A Natural Minor Scale\\E-C.mp3"); //2
+        Media AD = loadMusicFile("audioFiles\\A Natural Minor Scale\\A-D.mp3"); //3
+        Media AE = loadMusicFile("audioFiles\\A Natural Minor Scale\\A-E.mp3"); //4
+        Media AF = loadMusicFile("audioFiles\\A Natural Minor Scale\\A-F.mp3"); //5
+        Media DG = loadMusicFile("audioFiles\\A Natural Minor Scale\\D-G.mp3"); //6
+        Media DA = loadMusicFile("audioFiles\\A Natural Minor Scale\\D-A.mp3"); //7
+        Media GB = loadMusicFile("audioFiles\\A Natural Minor Scale\\G-B.mp3"); //8
+        Media GC = loadMusicFile("audioFiles\\A Natural Minor Scale\\G-C.mp3"); //9
+        Media GD = loadMusicFile("audioFiles\\A Natural Minor Scale\\G-D.mp3"); //10
+        Media BE = loadMusicFile("audioFiles\\A Natural Minor Scale\\B-E.mp3"); //11
+        Media BF = loadMusicFile("audioFiles\\A Natural Minor Scale\\B-F.mp3"); //12
+        Media BG = loadMusicFile("audioFiles\\A Natural Minor Scale\\B-G.mp3"); //13
+        Media eA = loadMusicFile("audioFiles\\A Natural Minor Scale\\highE-A.mp3"); //14
+        Media eB = loadMusicFile("audioFiles\\A Natural Minor Scale\\highE-B.mp3"); //15
+        Media eC = loadMusicFile("audioFiles\\A Natural Minor Scale\\highE-C.mp3"); //16
 
         //Array list of Notes which are media
         ArrayList<Media> noteMediaList = new ArrayList<>();
@@ -89,15 +89,17 @@ public class Console {
         //Original while loop has been deconstructed - A lot of it was not needed and not useful to base off with the new structure. if and else statement is now gone.
         int randChord = randomDecision(0, 2);
         int randNote = randomDecision(0, 16);
+        //"Plug" patterns here maybe? Like I've had with randomDecision()
 
         //Random initial value assignment so that it can be used for nextChords() and nextNotes().
 //        curChord = randChord;
-        curNotes = randNote;
+        curNote = randNote;
 
         while (true) {
 
             MediaPlayer chord = nextChord(chords); //getting the next chord to play.
             MediaPlayer note = nextNote(notes); //getting the  next note to play.
+            print(note.getMedia().getSource());
 
             chord.play();
             note.play();
@@ -127,29 +129,52 @@ public class Console {
         return randomTwoVal.nextInt(max - min + 1) + min;  //Returns both the minimum and maximum value.
     }
 
+
+    public MediaPlayer beats (int notes, int chords){
+
+
+    }
+
+
+
     // Position initial variables:
     int curChord = 0;
-    int curNotes = 0;
-    int checkChord = 0;// This variable checks what chord is currently being played.
+    int curNote = 0;
+    int curPattern = 0;
+    ArrayList<Integer> curNotes = new ArrayList<>();
+    int checkChord = 0;// This (initializer if you will) variable checks what chord is currently being played.
 
     public MediaPlayer nextChord(ArrayList<Media> chords) { //This will allow moving from one chord to the next within the chord list.
 
         MediaPlayer nextChordPlayer = new MediaPlayer(chords.get(curChord)); //This creates a new media player everytime for every media, based upon the current chord.
 
         print(chords.get(curChord).getSource());
-        //Testing to play 4 of the same chords after each other like in real life 2 5 1 progression:
-//        if (curChord == 2) {
+//        //Testing to play 4 of the same chords after each other like in real life 2 5 1 progression:
+        checkChord += 1;
+
+        //Iteration 1: (This only plays every chord once, and has the randomDecision method used)
+//        if (checkChord == 4) {
 //            curChord = 0; //Goes back to the start of the chords.
 //        } else {
 ////            curChord = randomDecision(0,2); //Randomises which chord to pick from next.
 //            curChord += 1;
 //        }
-        checkChord += 1;
+
+        //Iteration 2: (This does almost what I wanted, except it doesn't increment into the third chord and gets stuck on the second)
+//        if (checkChord == 4){
+//            curChord += 1;
+//            if(curChord == 3){
+//                curChord = 0;
+//            }
+//        }
+
+        //Iteration 3: (Works perfectly but took me some time to figure out the math and how it works)
         if (checkChord % 4 == 0){ // For every chord check is divisible by 4 to repeat for 4 measures of each chord
             curChord += 1;
             if(curChord == 3){ // This makes sure that it's still within the list, this will make sure to go back to the start.
-                //The reason why curChord is equal to three is due to it being within range of getting the 3 element within the list.
-                //Due to it incrementing prior in the first if statement, it will reach out of bound. Therefore, if it was equal to two, Cmaj7 won't be played.
+                //The reason why curChord is equal to three is due to it being within range of getting the 3rd element within the list.
+                //Due to it incrementing prior in the first if statement, it will reach out of bound.
+                // Therefore, CMaj7 won't be played, and it won't go back to the start of the index.
                 curChord = 0;
             }
         }
@@ -158,13 +183,39 @@ public class Console {
 
     public MediaPlayer nextNote(ArrayList<Media> notes) { //Same as the nextChord's structure.
 
-        MediaPlayer nextNotePlayer = new MediaPlayer(notes.get(curNotes));
+        MediaPlayer nextNotePlayer = new MediaPlayer(notes.get(curNote));
 
-        print(notes.get(curNotes).getSource());
-        if (curNotes == 16) {
-            curNotes = 0;
+        //Patterns should go here I think:
+        //Testing:
+        //Method 1 of listing the pattern:
+        ArrayList<Integer> patternOne = new ArrayList<>();
+        patternOne.add(4);
+        patternOne.add(6);
+        patternOne.add(4);
+        patternOne.add(9);
+        patternOne.add(7);
+
+        //Implementing Pattern one: First Iteration
+        if(curPattern < curNotes.size()){
+            MediaPlayer patternMediaPlayer = new MediaPlayer(notes.get(curNotes.get(curPattern)));
+            curPattern += 1;
+            System.out.println("In Pattern + curPattern: " + curPattern);
+            return patternMediaPlayer;
+        } else if (curNote == 4){
+            curNotes = patternOne;
+            curPattern = 0;
+            System.out.println("Starting Pattern");
+        }
+
+    //Hmmm... Could I have a similar approach with how I could get the curNotes to go into patternOne like with the if statement below...?
+
+//        print(notes.get(curNote).getSource());
+
+        //Resets/Goes back to the start of the index of notes:
+        if (curNote == 16) {
+            curNote = 0;
         } else {
-            curNotes = randomDecision(0,16);
+            curNote = randomDecision(0,16);
         }
         return nextNotePlayer;
     }
