@@ -123,9 +123,8 @@ public class Console {
     }
 
     public int randomDecision(int min, int max) {
-        //specify a min and maximum value and selects between the two points
         Random randomTwoVal = new Random(); //Initialise random object
-        // Figure out if they go within in the return or constructor value.
+
         return randomTwoVal.nextInt(max - min + 1) + min;  //Returns both the minimum and maximum value.
     }
 
