@@ -129,11 +129,13 @@ public class Console {
     }
 
 
-    public MediaPlayer beats (int notes, int chords){
+    public MediaPlayer beats (ArrayList<Media> notes){
 
-        MediaPlayer beats = new MediaPlayer();
+        MediaPlayer beats = new MediaPlayer(notes.get(curNote));
 
-        int ticks = 0;
+
+        int tick = 0;
+        int tickValue = tick * 4;
 
         return beats;
     }
