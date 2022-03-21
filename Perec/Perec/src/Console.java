@@ -131,11 +131,17 @@ public class Console {
 
     public MediaPlayer beats (ArrayList<Media> notes){
 
-        MediaPlayer beats = new MediaPlayer(notes.get(curNote));
+        MediaPlayer beats = new MediaPlayer(notes.get(curNote));//Assign beats to the current note that is playing.
 
+        //Notes to self:
+        // 1 tick = 1/4 of a beat.
+        // nextNote should tell what duration it will play for as apposed to a set determined time value.
+        // The value 4 should be how many subdivisions in a beat.
 
+        //Tick assignment:
         int tick = 0;
-        int tickValue = tick * 4;
+        int tickValue = 4 *  4; // To get a 1/4 of note ?
+
 
         return beats;
     }
@@ -202,6 +208,7 @@ public class Console {
         if (curNote == 16) {
             curNote = 0;
         } else {
+             curNote += 1;
             curNote = randomDecision(0,16);
         }
         return nextNotePlayer;
