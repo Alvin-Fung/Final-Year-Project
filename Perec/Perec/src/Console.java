@@ -65,9 +65,9 @@ public class Console {
 
     public ArrayList<Media> loadChords() { //no need to pass parameters as it makes its own chord list
         //Jazz chord variables
-        Media dChord = loadMusicFile("audioFiles\\JazzChords\\Dm7.mp3");
-        Media gChord = loadMusicFile("audioFiles\\JazzChords\\G7.mp3");
-        Media cChord = loadMusicFile("audioFiles\\JazzChords\\CMaj7.mp3");
+        Media dChord = loadMusicFile("audioFiles\\JazzChords\\Dm7 - Modded.mp3");
+        Media gChord = loadMusicFile("audioFiles\\JazzChords\\G7 - Modded.mp3");
+        Media cChord = loadMusicFile("audioFiles\\JazzChords\\Cm7 - Modded.mp3");
 
         //Array list of Medias
         ArrayList<Media> chordMediaList = new ArrayList<>();
