@@ -1,8 +1,7 @@
-import java.io.File;
-
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -65,9 +64,9 @@ public class Console {
 
     public ArrayList<Media> loadChords() { //no need to pass parameters as it makes its own chord list
         //Jazz chord variables
-        Media dChord = loadMusicFile("audioFiles\\JazzChords\\Dm7 - Modded.mp3");
-        Media gChord = loadMusicFile("audioFiles\\JazzChords\\G7 - Modded.mp3");
-        Media cChord = loadMusicFile("audioFiles\\JazzChords\\Cm7 - Modded.mp3");
+        Media dChord = loadMusicFile("audioFiles\\JazzChords\\Dm7.mp3");
+        Media gChord = loadMusicFile("audioFiles\\JazzChords\\G7.mp3");
+        Media cChord = loadMusicFile("audioFiles\\JazzChords\\CMaj7.mp3");
 
         //Array list of Medias
         ArrayList<Media> chordMediaList = new ArrayList<>();
@@ -192,6 +191,16 @@ public class Console {
         patternOne.add(9);
         patternOne.add(7);
 
+        ArrayList<Integer> patternTwo = new ArrayList<>();
+        patternTwo.add(3);
+        patternTwo.add(5);
+        patternTwo.add(7);
+        patternTwo.add(8);
+        patternTwo.add(9);
+        patternTwo.add(11);
+        patternTwo.add(10);
+        patternTwo.add(9);
+
         //Implementing Pattern one: First Iteration
         if(curPattern < curNotes.size()){
             MediaPlayer patternMediaPlayer = new MediaPlayer(notes.get(curNotes.get(curPattern)));
@@ -200,6 +209,10 @@ public class Console {
             return patternMediaPlayer;
         } else if (curNote == 4){
             curNotes = patternOne;
+            curPattern = 0;
+            System.out.println("Starting Pattern");
+        } else if (curNote == 3){
+            curNotes = patternTwo;
             curPattern = 0;
             System.out.println("Starting Pattern");
         }
