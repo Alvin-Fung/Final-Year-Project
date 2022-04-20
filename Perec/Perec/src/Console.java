@@ -97,17 +97,22 @@ public class Console {
         while (true) {
 
             MediaPlayer chord = nextChord(chords); //getting the next chord to play.
-            MediaPlayer note = nextNote(notes); //getting the  next note to play.
-            print(note.getMedia().getSource());
 
             chord.play();
-            note.play();
-            try {
+            try{
                 Thread.sleep(1000);
-            } catch (Exception e) {
+            }catch(Exception e){
             }
 
-            chord = nextChord(chords);
+           for(int i = 0; i< 5; i++) {
+               MediaPlayer note = nextNote(notes); //getting the  next note to play.
+               print(note.getMedia().getSource());
+               note.play();
+               try {
+                   Thread.sleep(1000);
+               } catch (Exception e) {
+               }
+           }
 
             chord.play();
             try {
@@ -138,8 +143,8 @@ public class Console {
         // The value 4 should be how many subdivisions in a beat.
 
         //Tick assignment:
-        int tick = 0;
-        int tickValue = 4 *  4; // To get a 1/4 of note ?
+        double tick = 0.4;
+        double tickValue = tick * 4; // To get a 1/4 of note ?
 
 
         return beats;
