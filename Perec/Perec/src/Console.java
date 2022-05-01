@@ -96,23 +96,20 @@ public class Console {
 
         while (true) {
 
-            MediaPlayer chord = nextChord(chords); //getting the next chord to play.
-
-            chord.play();
-            try{
-                Thread.sleep(1000);
-            }catch(Exception e){
-            }
-
-           for(int i = 0; i< 5; i++) {
+           for(int i = 0; i< 4; i++) {
+               MediaPlayer chord = nextChord(chords); //getting the next chord to play.
                MediaPlayer note = nextNote(notes); //getting the  next note to play.
                print(note.getMedia().getSource());
+
+               chord.play();
                note.play();
+
                try {
                    Thread.sleep(1000);
                } catch (Exception e) {
                }
            }
+            MediaPlayer chord = nextChord(chords); //getting the next chord to play.
 
             chord.play();
             try {
@@ -221,6 +218,8 @@ public class Console {
             curPattern = 0;
             System.out.println("Starting Pattern");
         }
+
+
 
         //Resets/Goes back to the start of the index of notes:
         if (curNote == 16) {
