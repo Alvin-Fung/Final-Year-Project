@@ -204,22 +204,22 @@ public class Console {
         patternTwo.add(9);
 
         //Implementing Pattern one: First Iteration
-        if(curPattern < curNotes.size()){
+        if (curPattern >= curNotes.size()) {
+            if (curNote == 4){
+                curNotes = patternOne;
+                curPattern = 0;
+                System.out.println("Starting Pattern");
+            } else if (curNote == 3){
+                curNotes = patternTwo;
+                curPattern = 0;
+                System.out.println("Starting Pattern");
+            }
+        } else {
             MediaPlayer patternMediaPlayer = new MediaPlayer(notes.get(curNotes.get(curPattern)));
             curPattern += 1;
             System.out.println("In Pattern + curPattern: " + curPattern);
             return patternMediaPlayer;
-        } else if (curNote == 4){
-            curNotes = patternOne;
-            curPattern = 0;
-            System.out.println("Starting Pattern");
-        } else if (curNote == 3){
-            curNotes = patternTwo;
-            curPattern = 0;
-            System.out.println("Starting Pattern");
         }
-
-
 
         //Resets/Goes back to the start of the index of notes:
         if (curNote == 16) {

@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="451a13b4-58c0-442f-be46-6d65387a413f" name="Changes" comment="For loop to separate the note output from chords.&#10;This allows for changing the note spacing independently&#10;from the chords">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Personal-Code/Data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Personal-Code/dataCorrected.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Personal-Code/decisionMap4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/Perec/Perec/src/Console.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Perec/Perec" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunManager">
     <configuration name="TYP" type="Application" factoryName="Application">
