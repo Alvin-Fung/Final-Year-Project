@@ -1,9 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="451a13b4-58c0-442f-be46-6d65387a413f" name="Changes" comment="For loop to separate the note output from chords.&#10;This allows for changing the note spacing independently&#10;from the chords">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/Perec/Perec/src/Console.java" afterDir="false" />
+    <list default="true" id="0f79cdb4-5b7e-4b18-a917-47d85c1be997" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Personal_Code.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/csv-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/Perec.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/A-D.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/A-E.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/A-F.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/B-E.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/B-F.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/B-G.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/D-A.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/D-G.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/E-A.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/E-B.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/E-C.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/G-B.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/G-C.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/G-D.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/highE-A.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/highE-B.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/highE-C.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/A.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/B.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/C#.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/C.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/D.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/E.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/F.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/G.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/3.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/4.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/5.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/6.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/7.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/8.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/Am.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/Bdim.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/CMaj7.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/Cm7 - Modded.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/Dm7 - Modded.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/Dm7.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/E.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/F.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/G7 - Modded.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/G7.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Console.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/TestConsole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Unused Files/AMinorScale.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Unused Files/Data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Unused Files/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Unused Files/NodeCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Unused Files/NodeMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Unused Files/decisionMap4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/NodeCollection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/NodeMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/TestConsole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/Unused Files/AMinorScale.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/Unused Files/Data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/Unused Files/decisionMap4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Personal-Code.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javafx-0.2.jar/javafx-0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openjfx-17.0.1_windows-x64_bin-sdk.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +102,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="21WYxFIeayV6iXgQwb8EnuiBzRl" />
+  <component name="ProjectId" id="2OBjmis6GARq5KUxX8kmdRdtmdl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -21,52 +111,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Perec/Perec" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-  </component>
-  <component name="RunManager">
-    <configuration name="TYP" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="TestConsole" />
-      <module name="Personal-Code" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Perec/Perec" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="451a13b4-58c0-442f-be46-6d65387a413f" name="Changes" comment="" />
-      <created>1638058555123</created>
+      <changelist id="0f79cdb4-5b7e-4b18-a917-47d85c1be997" name="Changes" comment="" />
+      <created>1681041032207</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1638058555123</updated>
+      <updated>1681041032207</updated>
     </task>
-    <task id="LOCAL-00001" summary="For loop to separate the note output from chords.&#10;This allows for changing the note spacing independently&#10;from the chords">
-      <created>1650489055243</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1650489055243</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="For loop to separate the note output from chords.&#10;This allows for changing the note spacing independently&#10;from the chords" />
-    <option name="LAST_COMMIT_MESSAGE" value="For loop to separate the note output from chords.&#10;This allows for changing the note spacing independently&#10;from the chords" />
   </component>
 </project>
