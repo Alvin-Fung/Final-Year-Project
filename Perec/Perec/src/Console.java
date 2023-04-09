@@ -96,19 +96,19 @@ public class Console {
 
         while (true) {
 
-           for(int i = 0; i< 4; i++) {
-               MediaPlayer chord = nextChord(chords); //getting the next chord to play.
+            for (int i = 0; i < 4; i++) {
+                MediaPlayer chord = nextChord(chords); //getting the next chord to play.
                MediaPlayer note = nextNote(notes); //getting the  next note to play.
                print(note.getMedia().getSource());
 
-               chord.play();
-               note.play();
+                chord.play();
+                note.play();
 
-               try {
-                   Thread.sleep(1000);
-               } catch (Exception e) {
-               }
-           }
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                }
+            }
             MediaPlayer chord = nextChord(chords); //getting the next chord to play.
 
             chord.play();
@@ -130,22 +130,22 @@ public class Console {
     }
 
 
-    public MediaPlayer beats (ArrayList<Media> notes){
-
-        MediaPlayer beats = new MediaPlayer(notes.get(curNote));//Assign beats to the current note that is playing.
-
-        //Notes to self:
-        // 1 tick = 1/4 of a beat.
-        // nextNote should tell what duration it will play for as apposed to a set determined time value.
-        // The value 4 should be how many subdivisions in a beat.
-
-        //Tick assignment:
-        double tick = 0.4;
-        double tickValue = tick * 4; // To get a 1/4 of note ?
-
-
-        return beats;
-    }
+//    public MediaPlayer beats (ArrayList<Media> notes){
+//
+//        MediaPlayer beats = new MediaPlayer(notes.get(curNote));//Assign beats to the current note that is playing.
+//
+//        //Notes to self:
+//        // 1 tick = 1/4 of a beat.
+//        // nextNote should tell what duration it will play for as apposed to a set determined time value.
+//        // The value 4 should be how many subdivisions in a beat.
+//
+//        //Tick assignment:
+//        double tick = 0.4;
+//        double tickValue = tick * 4; // To get a 1/4 of note ?
+//
+//
+//        return beats;
+//    }
 
     // Position initial variables:
     int curChord = 0;
@@ -163,23 +163,24 @@ public class Console {
         checkChord += 1;
 
         //Iteration 1: (This only plays every chord once, and has the randomDecision method used)
-//        if (checkChord == 4) {
-//            curChord = 0; //Goes back to the start of the chords.
-//        } else {
-////            curChord = randomDecision(0,2); //Randomises which chord to pick from next.
-//            curChord += 1;
-//        }
+        if (checkChord == 4) {
+            curChord = 0; //Goes back to the start of the chords.
+        } else {
+//            curChord = randomDecision(0,2); //Randomises which chord to pick from next.
+            curChord += 1;
+        }
 
         //Iteration 3: (Works perfectly but took me some time to figure out the math and how it works)
-        if (checkChord % 4 == 0){ // For every chord check is divisible by 4 to repeat for 4 measures of each chord
+        if (checkChord % 4 == 0) { // For every chord check is divisible by 4 to repeat for 4 measures of each chord
             curChord += 1;
-            if(curChord == 3){//Set to three so that isn't out of bounds due to earlier incrementation.
+            if (curChord == 3) {//Set to three so that isn't out of bounds due to earlier incrementation.
                 // Makes sure that it's still within the list and goes back to the start.
                 curChord = 0;
             }
         }
         return nextChordPlayer;
     }
+
 
     public MediaPlayer nextNote(ArrayList<Media> notes) { //Same as the nextChord's structure.
 
@@ -221,7 +222,7 @@ public class Console {
             return patternMediaPlayer;
         }
 
-        //Resets/Goes back to the start of the index of notes:
+        // Resets/Goes back to the start of the index of notes:
         if (curNote == 16) {
             curNote = 0;
         } else {
