@@ -2,97 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f79cdb4-5b7e-4b18-a917-47d85c1be997" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Personal_Code.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/csv-plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/Perec.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/A-D.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/A-E.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/A-F.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/B-E.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/B-F.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/B-G.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/D-A.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/D-G.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/E-A.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/E-B.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/E-C.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/G-B.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/G-C.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/G-D.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/highE-A.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/highE-B.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/A Natural Minor Scale/highE-C.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/A.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/B.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/C#.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/C.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/D.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/E.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/F.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/AmPentatonic/G.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/1.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/2.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/3.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/4.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/5.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/6.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/7.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/CMajor/8.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/Am.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/Bdim.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/CMaj7.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/Cm7 - Modded.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/Dm7 - Modded.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/Dm7.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/E.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/F.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/G7 - Modded.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/audioFiles/JazzChords/G7.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Console.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/TestConsole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Unused Files/AMinorScale.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Unused Files/Data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Unused Files/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Unused Files/NodeCollection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Unused Files/NodeMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/Perec/src/Unused Files/decisionMap4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/NodeCollection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/NodeMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/TestConsole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/Unused Files/AMinorScale.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/Unused Files/Data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Perec/out/production/Perec/Unused Files/decisionMap4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Personal-Code.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javafx-0.2.jar/javafx-0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openjfx-17.0.1_windows-x64_bin-sdk.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audioFiles/JazzChords/CMaj7.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audioFiles/JazzChords/Dm7.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audioFiles/JazzChords/G7.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/rewrite.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

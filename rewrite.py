@@ -1,21 +1,18 @@
-import os
-import sys
-import pygame 
-from pygame import *
+import os, os.path
+import numpy as np
+from playsound import playsound
 
-#A function to load notes
-# notepath = "/Users/TopNo/Desktop/Rewrite/audioFiles/A Natural Minor Scale"
-notePath = os.listdir("C:/Users/TopNo/Desktop/Rewrite/audioFiles/A Natural Minor Scale")
-print(notePath)
+notePath = os.listdir("D:/Stuff/Programming/TYP/Personal-Code/MusicFiles/A Natural Minor Scale")
+notesArray = np.array(notePath)
+print("Notes: ", notesArray)
 
-#A function to load chords
-chordPath = os.listdir("C:/Users/TopNo/Desktop/Rewrite/audioFiles/Harmonic chords")
-print(chordPath)
+chordPath = os.listdir("D:/Stuff/Programming/TYP/Personal-Code/MusicFiles/Chords")
+chordArray = np.array(chordPath)
+print("Chords: ",chordArray)
+
+playsound('D:/Stuff/Programming/TYP/Personal-Code/MusicFiles/Chords/CMaj7.mp3')
 
 #Producer of notes and chords
-
-pygame.init()
-
 
 #Consumer - continously looping waits for chords and notes to play
 
