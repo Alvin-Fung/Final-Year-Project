@@ -19,16 +19,18 @@ def loadPath(rootPath):
 notePaths = loadPath("D:/Stuff/Programming/TYP/Personal-Code/MusicFiles/A Natural Minor Scale")
 chordPaths = loadPath("D:/Stuff/Programming/TYP/Personal-Code/MusicFiles/Chords")
 
-def playSound(path):
-    playsound(path)
+def playSound(path, x):
+    playsound(path, x)
 
 #Producer of notes and chords
 def noteOrder(notePaths):
     pass
 
 currentChord = 0
-checkChord = 0
+currentPattern = 0
 currentNote = 0
+checkChord = 0
+# checkNote = 0 This maybe useful for later
 
 def nextChord(chordPaths):
     global currentChord, checkChord
@@ -51,17 +53,38 @@ def nextNote(notePaths):
         print(notePaths[currentNote].split("\\")[1])
     return notePaths[currentNote]
     
+def patternGenerator(currentNote):
+    global currentPattern
+    patternOne = (4,6,4,9,7)
+    patternTwo = (3,5,7,8,9,11,10,9)
 
-def threadFunction():
+    if (currentPattern >=len(currentNote)):
+        if(currentNote == 2):
+            currentNote = patternOne
+            print("Starting Pattern One...")
+            currentPattern = 0
+        elif (currentNote == 3):
+            currentNote = patternTwo
+            currentPattern = 0
+            print("Starting Pattern Two...")
+        else:
+            currentPattern += 1
+            print("In Pattern ", currentPattern) 
+            return currentPattern
+
+def consumer():
+    #Consumer - continously looping waits for chords and notes to play (await.function() ?)
+    #the consumer function would intake from the note pattern generator
+    #keeps track of where it is(state) within the harmonic and melodic sections ?
+    #Should make notes for A TIME.
+    
     pass
 
 def play():
     while True:
-            chord = nextChord(chordPaths)
-            note = nextNote(notePaths)
-            playSound(chord, False)
-            playSound(note)
-play()
+        chord = nextChord(chordPaths)
+        note = nextNote(notePaths)
+        playSound(chord, False)
+        playsound(note)
 
-#Consumer - continously looping waits for chords and notes to play (await.function())
-#Later on: note pattern generator, keeps track of where it is(state) within the harmonic section
+play()
