@@ -24,11 +24,7 @@ def playSound(path, x):
     playsound(path, x)
 
 #Producer of notes and chords
-
-currentChord = 0
-currentNote = 0
-checkChord = 0
-# checkNote = 0 This maybe useful for later
+currentChord, currentNote, checkChord = 0,0,0
 
 def nextChord(chordPaths):
     global currentChord, checkChord
@@ -53,22 +49,22 @@ def nextNote(notePaths):
         print("========")
     return notePaths[currentNote]
     
-def noteSequencer(currentNote):
+def noteSequencer(currentNote, currentPattern):
     
     patternMap = {
-        "patternOne": [4,6,4,9,7],
-        "patternTwo": [3,5,7,8,9,11,10,9]
+        "0": [4,6,4,9,7],
+        "1": [3,5,7,8,9,11,10,9]
         # More patterns to be made later etc.
     }
     
     while True:
         if (currentPattern >=len(patternMap[str(currentNote)])):
             if(currentNote == 2):
-                currentNote = patternMap["patternOne"]
+                currentNote = "0"
                 print("Starting Pattern One...")
                 currentPattern = 0
             elif (currentNote == 3):
-                currentNote = patternMap=["patternTwo"]
+                currentNote = "1"
                 currentPattern = 0
                 print("Starting Pattern Two...")
             else:
@@ -76,41 +72,32 @@ def noteSequencer(currentNote):
                 currentPattern = 0
                 print("Switching back to Note", currentNote) 
                 
-            return currentPattern, currentNote
+            return currentNote, currentPattern
 
-
-    #Consumer function - continously looping waits for chords and notes to play
-    #- The consumer function would intake from the note pattern generator
-    #- Keeps track of where it is(state) within the melodic and harmonic sections
-    #- Should make notes for A TIME.
-    #   * Could utilise threading and time imports for this.
 
 def consumer():
     #Also acquiring set of notes to be then played  
-    global currentNote, currentChord, notePaths
-    
+    global notePaths
+    currentChord,currentPattern,currentNote = 0,0
     #Keeps track of the current chord and note being played
     currentNotePath = notePaths[currentNote]
-    currentChordPath = chordPaths[currentChord]
+    currentChordPath = chordPaths[currentChord] 
     
     #Play the notes at a time
     while True:
+        currentNote, currentPattern = noteSequencer(currentNotePath, currentPattern) #Then utilise the noteSequencer for patterns.
         currentNotePath = nextNote(notePaths) #Allows for next note progression
-        currentPattern = noteSequencer(currentNotePath) #based off the previous note, it will utilise the noteSequencer for patterns.
+        #Have some sort set of rules/random generation.
         time.sleep(5)
-        
-    #Determines what next note should be played
-    #Have some sort set of rules/random generation, can be borrowed from the noteSequencer() function 
-    
+        return currentChordPath
+ 
     #Updating what the current note and chord is and sends the results to play() function below.
    
-    return currentNotePath, currentPattern
-
 def play():
     while True:
         chord = nextChord(chordPaths)
-        note = nextNote(notePaths)
+        note = consumer()
         playSound(chord, False)
-        playSound(note)
-        
+        playSound(note)        
 play()
+
