@@ -85,11 +85,11 @@ def consumer():
     
     #Play the notes at a time
     while True:
-        currentNote, currentPattern = noteSequencer(currentNotePath, currentPattern) #Then utilise the noteSequencer for patterns.
         currentNotePath = nextNote(notePaths) #Allows for next note progression
+        currentPattern = noteSequencer(currentNotePath) #Then utilise the noteSequencer for patterns.
         #Have some sort set of rules/random generation.
         time.sleep(5)
-        return currentChordPath
+        yield currentPattern
  
     #Updating what the current note and chord is and sends the results to play() function below.
    
