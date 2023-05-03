@@ -24,8 +24,8 @@ chordPaths = loadPath("D:/Stuff/Programming/TYP/Personal-Code/MusicFiles/Chords"
 
 #Producer of notes and chords
 patternMap = {
-        "0": [4,6,4,9,7],
-        "1": [3,5,7,8,9,11,10,9]
+        0: [4,6,4,9,7],
+        1: [3,5,7,8,9,11,10,9]
         # More patterns to be made later etc.
     }
 currentChord, currentNote, currentPattern, checkChord = 0,0,0,0
@@ -45,34 +45,37 @@ def nextChord(chordPaths):
 def nextNote(notePaths, patternMap):
     global currentNote,currentPattern
     
+    currentNotePath = notePaths[currentNote]
+    
     while True:
-            if (currentPattern >=len(str(currentNote))):
+            if (currentPattern >=len(currentNotePath)):
                 if(currentNote == 2):
-                    currentNote = patternMap["0"]
+                    currentNote = patternMap[0]
                     print("Starting Pattern One...")
                     currentPattern = 0
                 elif (currentNote == 3):
-                    currentNote = patternMap["1"]
+                    currentNote = patternMap[1]
                     currentPattern = 0
                     print("Starting Pattern Two...")
                 else:
                     currentPattern += 1
                     print("Switching back to Note", currentNote) 
                     
-                    return currentPattern
+                    return (currentNotePath)
 
-            if (currentNote == len(notePaths) & 16):
+            if (currentNote == len(notePaths)- 1) or (currentNote == 16):
                 currentNote = 0
             else:
                 currentNote += 1
                 currentNote = random.randint(0,16)
+                
                 print(notePaths[currentNote].split("\\")[1])
                 print("========")
                 return notePaths[currentNote]
 
 def play():
     while True:
-        #Have conversion from index position to an actual note here
+        #Have conversion from index position to an actual note here.
         chord = nextChord(chordPaths)
         note = nextNote(notePaths, patternMap)
         playSound(chord, False)
